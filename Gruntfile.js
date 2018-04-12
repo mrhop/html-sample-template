@@ -41,12 +41,23 @@ module.exports = function (grunt) {
                     flatten: true,
                     src: ['node_modules/holderjs/holder.min.js'],
                     dest: 'public/js/dev/'
-                }]
+                },{
+                    expand: true,
+                    flatten: true,
+                    src: ['node_modules/flexslider/flexslider.css'],
+                    dest: 'public/css/flexslider/'
+                },{
+                    expand: true,
+                    flatten: true,
+                    src: ['node_modules/flexslider/fonts/*'],
+                    dest: 'public/css/flexslider/fonts/'
+                },]
             },main: {
                 files:[
                     {expand: true,cwd: 'public/', src: ['*.html'], dest: 'dest/', filter: 'isFile'},
                     {expand: true,cwd: 'public/', src: ['assets/**'], dest: 'dest/'},
                     {expand: true,cwd: 'public/',  src: ['js/basic.browserify.min.js'], dest: 'dest/', filter: 'isFile'},
+                    {expand: true,cwd: 'public/',  src: ['js/dev/holder.min.js'], dest: 'dest/', filter: 'isFile'},
                     {expand: true,cwd: 'public/',  src: ['css/**'], dest: 'dest/', filter: 'isFile'}
                 ]
             }
