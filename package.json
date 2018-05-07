@@ -22,7 +22,7 @@
     "grunt-react": "^0.12.2",
     "holderjs": "^2.9.3",
     "jquery": "^2.1.4",
-    "flexslider": "^2.5.0"s
+    "flexslider": "^2.5.0"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
